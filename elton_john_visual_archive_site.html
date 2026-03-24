@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elton John Visual Archive</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: radial-gradient(circle at top, #1a1a1a, #000);
+      color: #f5f5dc;
+    }
+
+    header {
+      background: linear-gradient(90deg, #5a3e1b, #000);
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 32px;
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      background: #111;
+      padding: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to bottom, #000, #1a1a1a);
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: #bbb;
+    }
+
+    .section {
+      padding: 50px 30px;
+      text-align: center;
+    }
+
+    .section h2 {
+      margin-bottom: 20px;
+      color: #d4af37;
+    }
+
+    .filters {
+      margin-bottom: 20px;
+    }
+
+    .filters button {
+      margin: 5px;
+      padding: 8px 15px;
+      border: none;
+      background: #333;
+      color: #d4af37;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .filters button:hover {
+      background: #d4af37;
+      color: #000;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1c1c1c;
+      border-radius: 12px;
+      padding: 10px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 15px rgba(212,175,55,0.5);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .card p {
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  Elton John Visual Archive
+</header>
+
+<nav>
+  <a href="#studio">Álbuns</a>
+  <a href="#singles">Singles 70s</a>
+  <a href="#rarities">Raridades</a>
+</nav>
+
+<section class="hero">
+  <h1>Arquivo Visual</h1>
+  <p>Uma coleção digital dedicada às capas e à estética da era clássica</p>
+</section>
+
+<section id="studio" class="section">
+  <h2>Álbuns Clássicos</h2>
+
+  <div class="grid">
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/en/2/2b/Elton_John_-_Goodbye_Yellow_Brick_Road.jpg"><p>Goodbye Yellow Brick Road (1973)</p></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/en/0/0e/Captainfantastic.jpg"><p>Captain Fantastic (1975)</p></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/en/5/5e/Honky_Chateau.jpg"><p>Honky Château (1972)</p></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/en/3/3b/Elton_John_album_cover.jpg"><p>Elton John (1970)</p></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/en/e/e8/Madman_Across_the_Water.jpg"><p>Madman Across the Water (1971)</p></div>
+  </div>
+</section>
+
+<section id="singles" class="section">
+  <h2>Singles Anos 70</h2>
+
+  <div class="filters">
+    <button onclick="filter('all')">Todos</button>
+    <button onclick="filter('hit')">Hits</button>
+    <button onclick="filter('rare')">Raros</button>
+  </div>
+
+  <div class="grid" id="singleGrid">
+    <div class="card hit"><img src="https://upload.wikimedia.org/wikipedia/en/8/8c/Your_Song_single.jpg"><p>Your Song</p></div>
+    <div class="card hit"><img src="https://upload.wikimedia.org/wikipedia/en/f/f4/Rocket_Man_single.jpg"><p>Rocket Man</p></div>
+    <div class="card hit"><img src="https://upload.wikimedia.org/wikipedia/en/3/3e/Crocodile_Rock.jpg"><p>Crocodile Rock</p></div>
+    <div class="card rare"><img src="https://upload.wikimedia.org/wikipedia/en/6/6a/Philadelphia_Freedom.jpg"><p>Philadelphia Freedom</p></div>
+    <div class="card rare"><img src="https://upload.wikimedia.org/wikipedia/en/1/1f/Someone_Saved_My_Life_Tonight.jpg"><p>Someone Saved My Life Tonight</p></div>
+  </div>
+</section>
+
+<section id="rarities" class="section">
+  <h2>Raridades & Colecionáveis</h2>
+
+  <div class="grid">
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/en/7/7f/Daniel_single.jpg"><p>Daniel (Alt Cover)</p></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/en/3/3e/Crocodile_Rock.jpg"><p>Promo Edition</p></div>
+  </div>
+</section>
+
+<footer>
+  Projeto visual | Coleção Elton John
+</footer>
+
+<script>
+  function filter(type) {
+    const cards = document.querySelectorAll('#singleGrid .card');
+    cards.forEach(card => {
+      if (type === 'all') {
+        card.style.display = 'block';
+      } else {
+        card.style.display = card.classList.contains(type) ? 'block' : 'none';
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
